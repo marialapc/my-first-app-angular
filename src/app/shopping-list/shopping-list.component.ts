@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Ingredient } from '../shared/ingredients.modal'
+import { Ingredient } from '../shared/ingredients.model'
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
@@ -12,4 +12,8 @@ export class ShoppingListComponent {
   ]; 
 
   constructor() { }
+
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
 }
